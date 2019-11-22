@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function prime(n){
+            for(var x=2; x<n;x++)
+            {
+                if(n%x===0){
+                    return('not prime');
+                }
+            }
+            return('prime');
+        }
+        console.log(prime(44));
+        console.log('====================================');
+        var prime1= function(n1){
+            for(var x=2; x<n;x++)
+            {
+                if(n%x===0){
+                    return('not prime');
+                }
+            }
+            return('prime');  
+        }
+        console.log(prime(37));
+        console.log('======================================');
+         ( function(n2) {
+            for(var x=2; x<n2;x++)
+            {
+                if(n2%x===0){
+                    return('not prime');
+                }
+            }
+            return('prime'); 
+          }  (37));
+          console.log('========================================');
+          var prime2=(n3) => {
+            for(var x=2; x<n3;x++)
+            {
+                if(n3%x===0){
+                    return('not prime');
+                }
+            }
+            return('prime'); 
+          }
+            console.log(prime2(37));
+          
+
+    </script>
+</body>
+</html>

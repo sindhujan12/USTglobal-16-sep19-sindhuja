@@ -1,0 +1,64 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body"#form="ngForm"(ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">form 3</h1>
+    <div class="form-group">
+        <input type="text" name="name" id=" name" class="form-control" placeholder="enter user name"#text="ngModel"ngModel required>
+<div *ngIf="text.touched && text.invalid">
+<p class="alert alert-danger"*ngIf="text.errors.required">This field is required</p>
+</div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="name" id=" name" class="form-control" placeholder="enter user age"#text="ngModel"ngModel required>
+    </div>
+     
+
+    <div class="radio">
+        <label>
+            <input type="radio" name="gender" id="input" value="1" checked="checked">
+         male
+        </label>
+        <label>
+                <input type="radio" name="gender" id="input" value="2" checked="checked">
+                female
+            </label>
+           
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="gender" id="input" value="1" checked="checked">
+         others
+        </label>
+    </div>
+
+
+    <div class="form-group">
+        <input type="email" name="email" id="email" class="form-control" placeholder="enter email"#email="ngModel"ngModel required>
+    <div *ngIf="email.touched && email.invalid">
+    <p class="alert alert-danger"*ngIf="email.errors.required">This field is required</p>
+    </div>
+    </div>
+
+
+    <div class="forms">
+        <input type="text" name="contat" id="mctc" class="form-control" placeholder="enter contact number">
+
+    </div>
+
+    <div class="form-group">
+        <input type="password" name="password" id="password" class="form-control" placeholder="enter password"#password="ngModel"ngModel required>
+        <div *ngIf="password.touched && password.invalid">
+        <p class="alert alert-danger" *ngIf="password.errors.required">This field is required</p>
+    </div>
+</div>
+    <div class="form-group">
+        <input type="password" name="password" id="pass"class="form-control" placeholder="re-type password" >
+    </div>
+    
+    <div class="button">
+        <button type ="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">add user</button>
+    
+    </div>
+
+</form>
+
+
+

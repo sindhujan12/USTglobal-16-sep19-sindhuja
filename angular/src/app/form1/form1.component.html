@@ -1,0 +1,37 @@
+<!-- <p>forms works!</p> -->
+<!-- <p>register works!</p> -->
+<form action="" class="col-md-4 offset-4 mt-5 card card-body"#form="ngForm"(ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">form 1</h1>
+    <div class="form-group">
+        <input type="text" name="company name" id="company name" class="form-control" placeholder="enter company name"#text="ngModel"ngModel required>
+<div *ngIf="text.touched && text.invalid">
+<p class="alert alert-danger"*ngIf="text.errors.required">This field is required</p>
+</div>
+    </div>
+    <div class="form-group"> 
+<select name="skills" id="skills">
+    <option value="0">skills</option>
+    <option value="1">java</option>
+    <option value="2">angular</option>
+    <option value="3">sql</option>
+</select>
+    </div>
+     
+<div class="form-group">
+    <input type="email" name="email" id="email" class="form-control" placeholder="year of experience"#email="ngModel"ngModel required>
+<div *ngIf="email.touched && email.invalid">
+<p class="alert alert-danger"*ngIf="email.errors.required">This field is required</p>
+</div>
+</div>
+    
+    <div class="forms">
+        <input type="text" name="mctc" id="mctc" class="form-control" placeholder="MCTC"><br>
+        <input type="text" name="location" id="location" class="form-control" placeholder="location">
+
+    </div>
+    <div class="button">
+        <button type ="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">add requirements</button>
+    
+    </div>
+</form>
+

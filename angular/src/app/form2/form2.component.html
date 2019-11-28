@@ -1,0 +1,51 @@
+
+<form action="" class="col-md-4 offset-4 mt-5 card card-body"#form="ngForm"(ngSubmit)="loginData(form)">
+    <h1 class="text-center bg-dark text-white">form 2</h1>
+    <div class="form-group">
+        <input type="text" name="company name" id="company name" class="form-control" placeholder="enter candidate name"#text="ngModel"ngModel required>
+<div *ngIf="text.touched && text.invalid">
+<p class="alert alert-danger"*ngIf="text.errors.required">This field is required</p>
+</div>
+    </div>
+     
+<div class="form-group">
+    <input type="email" name="email" id="email" class="form-control" placeholder="year of experience"#email="ngModel"ngModel required>
+<div *ngIf="email.touched && email.invalid">
+<p class="alert alert-danger"*ngIf="email.errors.required">This field is required</p>
+</div>
+</div>
+    
+
+    <div class="radio">
+        <label>
+            <input type="radio" name="java" id="input" value="1" checked="checked">
+         java
+        </label>
+        <label>
+                <input type="radio" name="java" id="input" value="1" checked="checked">
+                sql
+            </label>
+            <label>
+                    <input type="radio" name="java" id="input" value="1" checked="checked">
+                    angular
+                </label>
+                <label>
+                        <input type="radio" name="java" id="input" value="1" checked="checked">
+                        spring
+                    </label>
+    </div>
+    
+
+
+    <div class="form-group">
+        <input type="text" name="mctc" id="mctc" class="form-control" placeholder="CCTC"><br>
+        <input type="text" name="location" id="location" class="form-control" placeholder="ECTC">
+
+    </div>
+    <div class="button">
+        <button type ="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">schedule interview</button>
+    
+    </div>
+</form>
+
+

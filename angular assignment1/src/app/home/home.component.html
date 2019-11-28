@@ -1,0 +1,19 @@
+<div _ngcontent-qpl-c2="" class="col-md-3 float-left"><h5 _ngcontent-qpl-c2="" class="text-center">Sports News</h5>
+    <div _ngcontent-qpl-c2="" class="col-md-12 card card-body" *ngFor="let new of news1">
+       <a href="{{new.url}}"> <img _ngcontent-qpl-c2="" alt="News Image" class="card-img-top" src ="{{new.urlToImage}}"></a>
+        <h5 _ngcontent-qpl-c2="">{{new.title}}</h5>
+    </div>
+</div>
+<div _ngcontent-qpl-c2="" class="col-md-6 float-left"><h3 _ngcontent-qpl-c2="" class="text-center">Top News From India</h3>
+        <div _ngcontent-qpl-c2="" class="col-md-12 card card-body" *ngFor="let new of news">
+            <a href="{{new.url}}"><img _ngcontent-qpl-c2="" alt="News Image" class="card-img-top" src ="{{new.urlToImage}}"></a>
+            <h5 _ngcontent-qpl-c2="">{{new.title}}</h5>
+        </div>
+
+</div>
+<div _ngcontent-qpl-c2="" class="col-md-3 float-left"><h5 _ngcontent-qpl-c2="" class="text-center">Entertainment News</h5>
+    <div _ngcontent-qpl-c2="" class="col-md-12 card card-body" *ngFor="let new of news2">
+       <a href="{{new.url}}"><img _ngcontent-qpl-c2="" alt="News Image" class="card-img-top" src ="{{new.urlToImage}}"></a> 
+        <h5 _ngcontent-qpl-c2="">{{new.title}}</h5>
+    </div>
+</div>

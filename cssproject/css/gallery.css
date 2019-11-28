@@ -1,0 +1,15 @@
+img{
+    width: 250px;
+    height: 300px;
+    border: 2px solid rgb(46, 44, 44);
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    box-shadow: 20px 20px 15px rgb(211, 177, 24);
+    background-color: rgb(122, 207, 52);
+}
+img:hover{
+    transform: scale(1.1,1.1);
+    transition: all 2s;
+}

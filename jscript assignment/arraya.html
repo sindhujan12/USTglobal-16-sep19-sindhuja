@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("FOR ARRAY FUNCTION..:");
+console.log("function 1")
+var a = (num1,num2)=>{
+    var arry = [23,43,56,77,88,99,123];
+    var len = arry.length;
+    arry[len-1] = num1;
+    arry[len] = num2;
+    var sum = 0;
+    for(var i=0; i<arry.length; i++)
+    {
+        sum = sum + arry[i];
+    }
+    return sum;
+}
+
+console.log('sum = ',a(10,20));
+
+console.log('function 2');
+ function sum1(num1,num2){
+    var arry = [23,43,56,77,88,99,123];
+    var len = arry.length;
+    arry[len-1] = num1;
+    arry[len] = num2;
+    var sum = 0;
+    for(var i=0; i<arry.length; i++)
+    {
+        sum = sum + arry[i];
+    }
+    return sum;
+}
+console.log('sum = ',sum1(10,20));
+
+console.log('function 3');
+var b = function(num1,num2){
+    var arry = [23,43,56,77,88,99,123];
+    var len = arry.length;
+    arry[len-1] = num1;
+    arry[len] = num2;
+    var sum = 0;
+    for(var i=0; i<arry.length; i++)
+    {
+        sum = sum + arry[i];
+    }
+    return sum;
+}
+console.log('SUM = ',b(10,20));
+
+console.log('FUNCTION 4');
+(
+    function(num1,num2)
+    {
+        var arry = [23,43,56,77,88,99,123];
+        var len = arry.length;
+        arry[len-1] = num1;
+        arry[len] = num2;
+        var sum = 0;
+        for(var i=0; i<arry.length; i++)
+        {
+            sum = sum + arry[i];
+        }
+        return sum;
+    }
+)
+var v = (10,20);
+console.log("SUM = ",v);
+        </script>
+</body>
+</html>

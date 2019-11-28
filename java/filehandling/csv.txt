@@ -1,0 +1,3 @@
+20,Roshan,80000,M
+21,Samyuktha,50000,F
+22,Hari,45000,M

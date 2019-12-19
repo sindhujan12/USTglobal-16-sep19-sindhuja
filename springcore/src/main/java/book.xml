@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <bean id="author" class="com.ustglobal.springcore.book.Author"></bean>
+    <bean id="bName" value="Sindhuja"></bean>
+    <bean id = "PenName" value="Sindhu"></bean>
+    
+    <bean id ="book" class="com.ustglobal.springcore.book.Book" autowire="byName">
+  
+    <property name="name" value="My Journey"/>
+    <property name="price" value="1000"/>
+    </bean>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </beans> 

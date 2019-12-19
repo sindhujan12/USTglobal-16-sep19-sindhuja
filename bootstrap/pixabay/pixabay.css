@@ -1,0 +1,88 @@
+#image
+{
+    
+    /* background-image: url(C:\Users\DELL\Desktop\cssproject\image\milky-way-2750627__340.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-position: 2px;
+     height: 400px;
+     padding: 40px;
+     
+
+}
+#grad{
+    height:500px;
+    background: linear-gradient(rgb(37, 37, 216),rgb(48, 45, 45),rgb(32, 32, 80));
+}
+p,h1{
+    text-align: center;
+    padding: 30px;
+    color:white;
+    text-emphasis-color: white;
+    
+}
+input[type="search"]
+{
+    height: 30px;
+    width:800px;
+}
+td{
+    color: white;
+    text-align: left;
+}
+img{
+    width: 250px;
+    height: 300px;
+    border: 2px white;
+    padding: 20px;
+    border-radius: 0px;
+    margin-left: 20px;
+    margin-top: 10px;
+    
+}
+picture:hover
+{
+    transform: scale(1.1,1.1);/*for zooming purpose*/
+}
+
+.footer{
+
+    background-color:grey;
+    height:100px;
+    color:white;
+    font-size: 10px;
+
+}
+.bt{
+    color:white;
+    background-color: green;
+    width: 5cm;
+    height: 1cm;
+    margin-left: 45%;
+    text-align: center;
+    border-radius: 10px;
+
+}
+button:hover{
+    transform:scale(1.1,1.1);
+    transform-style:preserve-3d;
+}
+.label{
+text-align: center;
+}
+.labels{
+    text-align: center;
+}
+.para{
+    margin-left: 5cm;
+    margin-right: 5cm;
+   text-align: center;
+   color: black
+}
+.para1{
+    text-align: center;
+    color: black;
+}
+p[class="para2"]{
+    text-align: center;
+color: white;}

@@ -1,0 +1,43 @@
+
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="addProducts(form)">
+    <h1 class="text-center bg-success text-white">AddProducts</h1>
+    <div class="form-group">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter product Name" #name="ngModel"  ngModel required>
+        <div *ngIf="name.touched && name.invalid">
+            <p class="alert-danger" *ngIf="name.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="category" id="category" class="form-control" placeholder="Enter Category"
+            #category="ngModel" ngModel required  pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+">
+        <div *ngIf="category.touched && category.invalid">
+            <p class="alert-danger" *ngIf="category.errors.required">*This field is required</p>
+            <p class="alert-danger" *ngIf="category.errors.pattern">*category have doesnot with lowercase and no spaces and numbers</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="company" id="company" class="form-control" placeholder="Enter Company Name" #company="ngModel"
+            ngModel required  pattern="[a-zA-Z0-9]+[a-zA-Z0-9 ]+">
+        <div *ngIf="company.touched && company.invalid">
+            <p class="alert-danger" *ngIf="company.errors.required">*This field is required</p>
+            <p class="alert-danger" *ngIf="company.errors.pattern">*company have doesnot with lowercase and no spaces and numbers</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Enter Quantity"
+            #quantity="ngModel" ngModel required>
+        <div *ngIf="quantity.touched && quantity.invalid">
+            <p class="alert-danger" *ngIf="quantity.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="number" name="price" id="price" class="form-control" placeholder="Enter Price"
+            #price="ngModel" ngModel required>
+        <div *ngIf="price.touched && price.invalid">
+            <p class="alert-danger" *ngIf="price.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn-outline-success float-right" [disabled]="form.invalid">AddProducts</button>
+    </div>
+</form>

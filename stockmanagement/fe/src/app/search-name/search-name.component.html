@@ -1,0 +1,38 @@
+
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="getProduct(form)">
+    <h1 class="text-center bg-success text-white">Search By Name</h1>
+    <div class="form-group">
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter product name" #name="ngModel"
+            ngModel required>
+        <div *ngIf="name.touched && name.invalid">
+            <p class="alert-danger" *ngIf="name.errors.required">*This field is required</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn-outline-success float-right" [disabled]="form.invalid">GetDetails</button>
+    </div>
+</form>
+
+
+<table class="table table-bordered table-hover"   *ngIf='product'>
+    <thead class="text-center bg-success text-white">
+        <tr>
+            <th>ProductId</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Company</th>
+            <th>Quantity</th> 
+            <th>Price</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td>{{product.product_id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.company}}</td>     
+            <td>{{product.quantity}}</td>
+            <td>{{product.price}}</td>            
+        </tr>
+    </tbody>
+</table>

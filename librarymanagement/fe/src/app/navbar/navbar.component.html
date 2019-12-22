@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg text-light navbar-light bg-dark">
+    <a class="navbar-brand text-light" routerLink="/">Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-light" *ngIf="isLibrarian" routerLink="libhome">Home</a>
+          <a class="nav-link text-light" *ngIf="isStudent" routerLink="studenthome">Home</a>
+          <a class="nav-link text-light" *ngIf="isAdmin" routerLink="adminHome">Home</a>
+          <a class="nav-link text-light" *ngIf="notLogin" routerLink="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" *ngIf="isLibrarian" routerLink="addbook">Add Book</a>
+          <a class="nav-link text-light" *ngIf="isAdmin" routerLink="registerStudent">Register Student</a>
+          <!-- <a class="nav-link text-light" *ngIf="isStudent" routerLink="mybooks">My Books</a> -->
+          <!-- <a class="nav-link text-light" *ngIf="isStudent" routerLink="search">Sarch Books</a> -->
+        
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-light" *ngIf="isStudent" routerLink="books">Books</a>
+            <a class="nav-link text-light" *ngIf="isLibrarian" routerLink="getallbook">Books</a>
+            <a class="nav-link text-light" *ngIf="isAdmin" routerLink="registerlibrarian">Register Librarian</a>
+        </li>
+        <li class="nav-item">
+            <!-- <a class="nav-link text-light" *ngIf="isLibrarian" routerLink="issuebook">Issue Book</a> -->
+              <a class="nav-link text-light" *ngIf="isAdmin" routerLink="deletelibrarian">Remove Librarian</a>
+        </li>
+        <li class="nav-item">
+            <!-- <a class="nav-link text-light" *ngIf="isLibrarian" routerLink="returnbook">Return Book</a> -->
+            <a class="nav-link text-light" *ngIf="isAdmin" routerLink="deletestudent">Remove Student</a>
+        </li>
+        <li class="nav-item" *ngIf="isNotLogin">
+            <a class="nav-link text-light"  routerLink="search">Search</a>
+        </li>
+       
+      </ul>
+      <form class="form-inline my-2 my-lg-0">  
+        <a class="nav-link text-light" *ngIf="isStudent" (click)="studentLogout()" routerLink="">Logout</a>
+        <a class="nav-link text-light" *ngIf="isLibrarian" (click)="librarianLogout()" routerLink="">Logout</a>
+        
+        <a class="nav-link text-light" *ngIf="isAdmin" (click)="adminLogout()" routerLink="">Logout</a>
+        <a class="nav-link text-light" *ngIf="isLogin" routerLink="">Profile</a>
+      
+        <div>
+          <a class="text-light" routerLink="studentlogin">Student Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <div>
+          <a class="text-light" routerLink="librarylogin">Librarian Login</a> <br>
+        </div>
+      </form>
+    </div>
+  </nav>

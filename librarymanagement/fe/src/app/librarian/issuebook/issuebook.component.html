@@ -1,0 +1,45 @@
+<table class="table book-class table-bordered table-striped table-dark mt-5 mb-5 col-md-8 offset-2">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Books</th> -->
+            <th scope="col">Book Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Publication</th>
+            <th scope="col">Issue Book</th>
+            
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books; index as i">
+           <!-- <td>{{i+1}}</td> -->
+           <td>{{book.name}}</td>
+           <td>{{book.author}}</td>
+           <td>{{book.publication}}</td>
+           <td><button class="btn btn-success" (click)="issueBook(student)">Issue</button></td>
+           
+          </tr>
+        </tbody>
+      </table>
+<!-- Modal  -->
+<div class="modal fade" *ngIf="selectedStudent" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Student Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <h4>student Name</h4>: <h4>{{selectedStudent.sname}}</h4>
+       <h4>USN</h4>: <h4>{{selectedStudent.usn}}</h4>
+       <h4>Branch</h4>: <h4>{{selectedStudent.branch}}</h4>
+       <h4>sem</h4>: <h4>{{selectedStudent.sem}}</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

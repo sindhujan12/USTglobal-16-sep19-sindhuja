@@ -1,0 +1,61 @@
+<table class="table book-class table-bordered table-striped table-light mt-5 mb-5 col-md-8 offset-2">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Books</th> -->
+            <th scope="col">Book Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Publication</th>
+            
+            <th scope="col">Delete Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+           <!-- <td>{{row+1}}</td> -->
+           <td>{{book.name}}</td>
+           <td>{{book.author}}</td>
+           <td>{{book.publication}}</td>
+           
+           <td><button class="btn btn-danger" (click)="deleteBooks(book)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="modal" *ngIf="selectedBook" tabindex="-1" role="dialog" id="exampleModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Edit Book</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+<div class="mt-1 card card-body mb-1">
+  <form action="" #form="ngForm" (ngSubmit)="editBook(form)">
+          <h1 class="text-center bg-dark text-danger">Update Book</h1>
+          <input type="hidden" name="bid" #bid="ngModel" ngModel [(ngModel)]="selectedBook.bid">
+      <div class="form-group">
+          <input type="text" name="name" id="name" #name="ngModel" ngModel class="form-control" placeholder="Enter Book Name">
+      </div>
+      <div class="form-group">
+          <input type="text" name="author" id="author" class="form-control" #author="ngModel" ngModel placeholder="Enter Author Name">
+      </div>
+      <div class="form-group">
+          <input type="text" name="publication" id="publication" #publication="ngModel" ngModel placeholder="Enter Publication" class="form-control">
+      </div>
+      <div class="form-group">
+          <input type="number" name="copies" id="copies" #copies="ngModel" ngModel placeholder="Enter No Of Copies" class="form-control">
+      </div>
+      <div class="from-group">
+          <button class="btn btn-success float-right" type="submit">Submit</button>
+      </div>
+  </form>
+</div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -1,0 +1,26 @@
+<div class="col-md-4 offset-4" *ngIf="bookstatus">
+<h1 class="text-center bg-dark text-light" *ngIf="bookstatus">{{bookstatus}}</h1>
+</div>
+             
+<div class="col-md-6 offset-3 mt-1 card card-body mb-1">
+    <form action="" #form="ngForm" (ngSubmit)="addBook(form)">
+            <h1 class="text-center bg-dark text-light">Add Book</h1>
+            <input type="hidden" name="status" #status="ngModel" ngModel [(ngModel)]="available">
+        <div class="form-group">
+            <input type="text" name="name" id="name" #name="ngModel" ngModel class="form-control" placeholder="Enter Book Name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="author" id="author" class="form-control" #author="ngModel" ngModel placeholder="Enter Author Name">
+        </div>
+        <div class="form-group">
+            <input type="text" name="publication" id="publication" #publication="ngModel" ngModel placeholder="Enter Publication" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="number" name="copies" id="copies" #copies="ngModel" ngModel placeholder="Enter No Of Copies" class="form-control">
+        </div>
+        <div class="from-group">
+            <button class="btn btn-success float-right" type="submit">Submit</button>
+        </div>
+    </form>
+  </div>
+   

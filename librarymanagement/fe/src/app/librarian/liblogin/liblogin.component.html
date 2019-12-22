@@ -1,0 +1,21 @@
+<div class="col-md-4 mt-5 mb-5 offset-4 card card-body">
+    <h3 class="text-center text-light bg-dark">Librarian Login Form</h3>
+    <form action="" #form="ngForm" (ngSubmit)="loginData(form)">
+        <div class="form-group">
+            <input type="email" name="email" id="email" #email="ngModel" ngModel class="form-control" placeholder="enter email" required>
+        <div *ngIf="email.touched && email.invalid">
+            <p class="text-danger" *ngIf="email.errors.required">This field required</p>
+        </div>
+        </div>
+        <div class="form-group">
+                <input type="password" name="password" #password="ngModel" ngModel id="password" class="form-control" placeholder="enter password" required>
+         <div *ngIf="password.touched && password.invalid">
+            <p class="text-danger" *ngIf="password.errors.required">This field required</p>
+          </div>
+         </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-outline-success float-right" [disabled]="form.invalid">Login</button>
+        </div>
+            
+    </form>
+</div>

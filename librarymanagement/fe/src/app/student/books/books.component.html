@@ -1,0 +1,21 @@
+<!-- <input class="form-control mt-5 mb-5 col-md-8 offset-2" type="search" name="search" id="name" placeholder="search book by name" [(ngModel)]='search'> -->
+<table class="table book-class table-bordered table-striped mt-5 mb-5 col-md-8 offset-2">
+        <thead>
+          <tr>
+            <!-- <th scope="col">Books</th> -->
+            <th scope="col">Book Name</th>
+            <th scope="col">Author</th>
+            <th scope="col">Publication</th>
+            <th scope="col">Issue Books</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+           <!-- <td>{{row+1}}</td> -->
+           <td>{{book.name}}</td>
+           <td>{{book.author}}</td>
+           <td>{{book.publication}}</td>
+           <td><button class="btn btn-success" (click)="issueBook(book)">Issue</button></td>
+          </tr>
+        </tbody>
+      </table>
